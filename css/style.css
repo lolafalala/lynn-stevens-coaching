@@ -1,9 +1,47 @@
 /* =========================================================
    Lynn Stevens Coaching — Brand Stylesheet
    Palette: neutral base, deep plum + gold accent
-   Type:    Fraunces (headings) / Beau Rivage (script accent) / Jost (body)
-   -- see index.html <head> comment for font substitution notes --
+   Type:    IvyPresto Display (headings) / La Luxe Script (accent) /
+            Glacial Indifference (body) — self-hosted from /fonts
    ========================================================= */
+
+@font-face {
+  font-family: 'La Luxe Script';
+  src: url('../fonts/la-luxe-script/LaLuxesScript.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IvyPresto Display';
+  src: url('../fonts/ivypresto/Ivy-Presto-Display-.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'IvyPresto Display';
+  src: url('../fonts/ivypresto/Ivy-Presto-Display-Semi-Bold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Glacial Indifference';
+  src: url('../fonts/glacial-indifference/GlacialIndifference-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Glacial Indifference';
+  src: url('../fonts/glacial-indifference/GlacialIndifference-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
 
 :root {
   /* Palette */
@@ -18,10 +56,11 @@
   --color-ink-soft:   #5C5049;
   --color-white:      #FFFFFF;
 
-  /* Type */
-  --font-script: 'Beau Rivage', cursive;
-  --font-serif:  'Fraunces', Georgia, serif;
-  --font-sans:   'Jost', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  /* Type — only Regular (400) + Semi-Bold/Bold (600/700) files exist for
+     each family, so weights elsewhere in this file are pinned to those. */
+  --font-script: 'La Luxe Script', cursive;
+  --font-serif:  'IvyPresto Display', Georgia, serif;
+  --font-sans:   'Glacial Indifference', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 
   --max-width: 1120px;
 }
@@ -39,7 +78,7 @@ body {
 }
 img { max-width: 100%; display: block; }
 a { color: inherit; text-decoration: none; }
-h1, h2, h3, h4 { font-family: var(--font-serif); font-weight: 500; line-height: 1.15; margin: 0 0 .5em; }
+h1, h2, h3, h4 { font-family: var(--font-serif); font-weight: 400; line-height: 1.15; margin: 0 0 .5em; }
 p { margin: 0 0 1.1em; }
 ul { margin: 0; padding: 0; }
 button { font-family: inherit; }
@@ -53,7 +92,7 @@ button { font-family: inherit; }
 .skip-link {
   position: absolute; left: -999px; top: 0;
   background: var(--color-gold); color: var(--color-plum-dark);
-  padding: .75em 1.25em; z-index: 1000; font-weight: 600;
+  padding: .75em 1.25em; z-index: 1000; font-weight: 700;
 }
 .skip-link:focus { left: 1rem; top: 1rem; }
 
@@ -70,7 +109,7 @@ button { font-family: inherit; }
   letter-spacing: .18em;
   text-transform: uppercase;
   color: var(--color-plum);
-  font-weight: 600;
+  font-weight: 700;
   margin: 0 0 1em;
 }
 .eyebrow-light { color: var(--color-gold-light); }
@@ -78,7 +117,7 @@ button { font-family: inherit; }
 .btn {
   display: inline-block;
   font-family: var(--font-sans);
-  font-weight: 600;
+  font-weight: 700;
   font-size: .95rem;
   letter-spacing: .03em;
   padding: .95em 2em;
@@ -150,7 +189,7 @@ button { font-family: inherit; }
 }
 .primary-nav a:not(.btn) {
   font-size: .92rem;
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing: .02em;
   position: relative;
   padding-bottom: 2px;
@@ -305,7 +344,7 @@ button { font-family: inherit; }
 }
 .contact-copy h2 { font-size: clamp(1.9rem, 3.4vw, 2.6rem); }
 .contact-copy p { color: var(--color-ink-soft); font-size: 1.03rem; }
-.contact-direct a { color: var(--color-plum); font-weight: 600; border-bottom: 1px solid var(--color-gold); }
+.contact-direct a { color: var(--color-plum); font-weight: 700; border-bottom: 1px solid var(--color-gold); }
 
 .contact-form {
   background: var(--color-white);
@@ -318,7 +357,7 @@ button { font-family: inherit; }
 .field label {
   display: block;
   font-size: .82rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: .04em;
   margin-bottom: .5em;
   color: var(--color-plum);
@@ -347,7 +386,7 @@ button { font-family: inherit; }
 .form-status {
   margin: 1rem 0 0;
   font-size: .92rem;
-  font-weight: 600;
+  font-weight: 700;
   min-height: 1.2em;
 }
 .form-status.success { color: #2E6B44; }
