@@ -53,7 +53,7 @@ If you add more weights later (e.g. an italic or a light), add a matching
 
 ## Photography
 
-The About section uses a real portrait (`images/lynn-stevens-2.png`),
+The About section uses a real portrait (`images/lynn-stevens.jpg`),
 cropped to a 4:5 ratio via CSS `object-fit: cover`. To add more photography
 elsewhere on the page (the brand bible calls for full-bleed real photography
 throughout), drop the file into `images/` and reference it in `index.html`.
