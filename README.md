@@ -53,6 +53,7 @@ If you add more weights later (e.g. an italic or a light), add a matching
 
 ## Photography
 
-The brand bible calls for full-bleed real photography. This build ships
-with flat color-block placeholders instead — drop portraits into `images/`
-and swap the `<img>` tags in `index.html` (marked with HTML comments).
+The About section uses a real portrait (`images/lynn-stevens-2.png`),
+cropped to a 4:5 ratio via CSS `object-fit: cover`. To add more photography
+elsewhere on the page (the brand bible calls for full-bleed real photography
+throughout), drop the file into `images/` and reference it in `index.html`.
