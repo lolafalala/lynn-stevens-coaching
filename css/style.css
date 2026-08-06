@@ -206,7 +206,13 @@ button { font-family: inherit; }
 
 /* ---------- Hero ---------- */
 .hero {
-  background: linear-gradient(180deg, var(--color-plum) 0%, var(--color-plum-dark) 100%);
+  background-color: var(--color-plum-dark);
+  background-image:
+    linear-gradient(100deg, rgba(36,16,25,.95) 0%, rgba(36,16,25,.88) 32%, rgba(36,16,25,.5) 58%, rgba(36,16,25,.18) 100%),
+    url('../images/hero-image.jpg');
+  background-position: center right, center right;
+  background-size: cover, cover;
+  background-repeat: no-repeat, no-repeat;
   color: var(--color-cream);
   padding: 7rem 0 6rem;
 }
@@ -422,7 +428,15 @@ button { font-family: inherit; }
     display: none;
   }
   .primary-nav.is-open { display: flex; }
-  .hero { padding: 5rem 0 4rem; }
+  .hero {
+    padding: 5rem 0 4rem;
+    /* Narrow crops show more of the photo behind the full-width text block,
+       so tint it uniformly dark instead of the desktop left-to-right fade. */
+    background-image:
+      linear-gradient(180deg, rgba(36,16,25,.93) 0%, rgba(36,16,25,.88) 100%),
+      url('../images/hero-image.jpg');
+    background-position: center 25%, center 25%;
+  }
   .about, .offer, .contact { padding: 4rem 0; }
   .contact-form { padding: 1.75rem; }
 }
